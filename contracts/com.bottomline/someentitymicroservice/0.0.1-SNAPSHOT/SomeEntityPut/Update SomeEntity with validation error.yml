@@ -1,0 +1,22 @@
+---
+name: "Update SomeEntity with validation error"
+
+request:
+  method: "PUT"
+  url: "/api/v1/someentities/00000000-0000-0000-0000-000000000001"
+  headers:
+    Content-Type: "application/json"
+  body:
+    name: ""
+    location: "One Location Updated"
+  matchers:
+    headers:
+      - key: "Content-Type"
+        regex: "application/json.*"
+        regexType: "as_string"
+response:
+  status: 422
+  headers:
+    Content-Type: "application/json"
+  body:
+    message: "Validation Error: [Name may not be blank]"

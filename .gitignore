@@ -1,0 +1,10 @@
+.DS_Store
+.idea
+*.iml
+
+# java stuff
+target
+
+
+
+

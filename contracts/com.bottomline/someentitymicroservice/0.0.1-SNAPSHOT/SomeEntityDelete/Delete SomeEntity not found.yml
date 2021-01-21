@@ -1,0 +1,17 @@
+---
+name: "Delete SomeEntity not found"
+
+request:
+  method: "DELETE"
+  url: "/api/v1/someentities/90000000-0000-0000-0000-000000000001"
+  matchers:
+    headers:
+      - key: "Content-Type"
+        regex: "application/json.*"
+        regexType: "as_string"
+response:
+  status: 404
+  headers:
+    Content-Type: "application/json"
+  body:
+    message: "SomeEntity [90000000-0000-0000-0000-000000000001] not found"

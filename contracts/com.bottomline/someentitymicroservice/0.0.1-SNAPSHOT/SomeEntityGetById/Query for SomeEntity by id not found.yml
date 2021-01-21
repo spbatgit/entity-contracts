@@ -1,0 +1,12 @@
+---
+name: "Query for SomeEntity by id not found"
+
+request:
+  method: "GET"
+  url: "/api/v1/someentities/90000000-0000-0000-0000-000000000001"
+response:
+  status: 404
+  headers:
+    Content-Type: "application/json"
+  body:
+    message: "SomeEntity [90000000-0000-0000-0000-000000000001] not found"
